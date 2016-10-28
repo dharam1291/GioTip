@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>GeoTip</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sign-in-up.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script> 
+    <script src="js/home.js"></script>
+  </head>
+  <body>
+  <div id="header_section">
+    <div id="logo"><img src="images/logo.k7"></div>
+    <div id="login_signup_section">
+	<ul>
+		<li><a href="#" id="home">home</a></li>
+		<li><a href="#" id="aboutus">aboutus</a></li>
+		<li><a href="#" id="signin">signin</a></li>
+		<div id="signup"><a href="#">signup</a></div>
+	</ul>
+    </div>
+  </div>
+  <div id="search_section">
+	<div id="tagandform">
+		<div id="tagline_section">Inspiring destinations within your reach</div>
+		<div id="form_section">	
+	 	<form action ="/giotip" method="get">  		
+			<select name="searchlocation" data-live-search="true" id="explore-city"></select>
+	  		<button type="submit">Search</button>
+		</form>
+		</div>
+     </div>
+ </div>
+<div id="parentcontainer">
+<div class="signin-up-container" id="signin-model">
+    <div class="omb_login">
+		<button id="signin_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<img src="https://box8.in/images/close.47cfd871.png" alt=""></button>
+		<div class="space-50"></div>
+    	<h3 class="omb_authTitle">Sign In</h3>
+		<div class="row omb_row-sm-offset-3">
+			<div class="col-xs-12 col-sm-12">	
+			    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+					<div class="input-group">
+						<input type="text"  id="form-control" name="username">
+						<label for="name">Email/Mobile</label>
+					</div>
+					<span class="help-block" style="display:none;"></span>
+										
+					<div class="input-group">
+						<input  type="password" id="form-control" name="password">
+						<label for="name">Password</label>
+					</div>
+                    			<span class="pass-error" style="display:none;">Password error</span>
+					<div>
+					<div class="rmdr">
+					<input tabindex="1" type="checkbox" id="input-1" checked>
+              				<label for="input-1"><p>Remember me</p></label>						
+					     </div>
+					     <div class = "frgtpass">
+						<a href="">Forgot Password ?</a>
+					     </div>
+		         		</div>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" id="signin-btn">Sign In</button>
+				</form>
+			</div>		
+    	</div>
+	<div class="row omb_row-sm-offset-3 omb_loginOr">
+			<div class="col-xs-12 col-sm-12">
+				<hr class="omb_hrOr">
+				<span class="omb_spanOr">or</span>
+			</div>
+	</div>
+	<div class="row omb_row-sm-offset-3 omb_socialButtons">
+    	    <div class="col-xs-4 col-sm-4">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+			        <i class="fa fa-facebook visible-xs"></i>
+			        <span class="hidden-xs" style="font-size:12px;">Sign up With Facebook</span>
+		        </a>
+	        </div>
+        	<div class="col-xs-4 col-sm-4">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+			        <i class="fa fa-twitter visible-xs"></i>
+			        <span class="hidden-xs" style="font-size:12px;">Sign up With Twitter</span>
+		        </a>
+	        </div>	
+        	<div class="col-xs-4 col-sm-4">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-google">
+			        <i class="fa fa-google-plus visible-xs"></i>
+			        <span class="hidden-xs" style="font-size:12px;">Sign up With Google+</span>
+		        </a>
+	        </div>	
+		</div>		    	
+	</div>
+<div class="space-15"></div>
+<p class="terms text-center" id="switchtype"> By signing here, you agree to our Terms of Service and Privacy Policy</p>
+<div class="new-member text-center"> New User? <a href="#"  onclick="signup_style(); return false;">Sign Up</a></div>
+</div>
+<!--end of signin-->
+
+<div class="signin-up-container" id="signup-model">
+    <div class="omb_login">
+	<button id="signup_close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+	<img src="https://box8.in/images/close.47cfd871.png" alt=""></button>
+	<div class="space-50"></div>
+    	<h3 class="omb_authTitle">Sign Up</h3>
+		<div class="row omb_row-sm-offset-3">
+			<div class="col-xs-12 col-sm-12">	
+			    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+					<div class="input-group">
+						<input type="text"  id="form-control" name="username">
+						<label for="name">Name</label>
+					</div>
+					<span class="help-block" style="display:none;"></span>
+										
+					<div class="input-group" id="signup-pass">
+						<input  type="password" id="form-control" name="password">
+						<label for="name">Password</label>
+					</div>
+					<span class="pass-error" style="display:none;"></span>
+
+					<div class="input-group" id="signup-email">
+						<input  type="text" id="form-control" name="email">
+						<label for="email">Email</label>
+					</div>
+					<span class="email-valid" style="display:none;"></span>
+					<div class="space-15" style="float:left;"></div>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" id="signup-btn">Sign Up</button>
+				</form>
+			</div>		
+    	</div>
+	<div class="row omb_row-sm-offset-3 omb_loginOr">
+			<div class="col-xs-12 col-sm-12">
+				<hr class="omb_hrOr">
+				<span class="omb_spanOr">or</span>
+			</div>
+	</div>
+	<div class="row omb_row-sm-offset-3 omb_socialButtons">
+    	    <div class="col-xs-4 col-sm-4">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+			        <i class="fa fa-facebook visible-xs"></i>
+			        <span class="hidden-xs" style="font-size:12px;">Sign In With Facebook</span>
+		        </a>
+	        </div>
+        	<div class="col-xs-4 col-sm-4">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
+			        <i class="fa fa-twitter visible-xs"></i>
+			        <span class="hidden-xs" style="font-size:12px;">Sign In With Twitter</span>
+		        </a>
+	        </div>	
+        	<div class="col-xs-4 col-sm-4">
+		        <a href="#" class="btn btn-lg btn-block omb_btn-google">
+			        <i class="fa fa-google-plus visible-xs"></i>
+			        <span class="hidden-xs"style="font-size:12px;">Sign In With Google+</span>
+		        </a>
+	        </div>	
+		</div>		    	
+	</div>
+<div class="space-15"></div>
+<p class="terms text-center" id="switchtype"> By signing here, you agree to our Terms of Service and Privacy Policy</p>
+<div class="new-member text-center">  Already a member?  <a href="#" onclick="signin_style(); return false;">Sign In</a></div>
+</div>
+</div>
+</body>
+</html>

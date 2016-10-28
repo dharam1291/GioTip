@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>GioTip</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+<script src = "js/jquery.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBob1y_FyxWm_rk0IZ38bZy07bqSAlEcSE&libraries=geometry,places&ext=.js"></script>
+<script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerwithlabel/src/markerwithlabel.js"></script>
+<link rel="stylesheet" type="text/css" href="css/dd.css" />
+<script src="js/jquery.dd.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+   <div id="logo"><img src="images/logo.k7"></div>
+    <div id="logout_section">
+	<ul>
+		<li><a href="#">home</a></li>
+		<li><a href="#">aboutus</a></li>
+		<div id="logout"><a href="#">logout</a></div>
+	</ul>
+    </div>
+  </div>
+  <!-- End Of Header -->
+  
+  <!-- start search header -->
+  <div id = "search-header">
+  	<div id = "search-site">
+  	  <div style="height: 55px;float: left;width: 70%;"><select id="select-search" style="width:80%" tableindex="-1"></select></div>
+      <div style="height: 55px;width: 30%;float: right;"><button id="search-site-button">Search</button></div>	
+  	</div> 
+    <div id = "booknow">
+    	<button id="booknow-button">Book Now</button>
+    </div>
+  </div>
+  
+  <div id="content">
+    <div id="left_content">
+      <div class="menu">
+        <ul>
+        
+        </ul>
+      </div>
+    </div>    
+  <div id="middel_content">
+	<ul>
+	  <li style="display:none;"></li>
+	</ul>
+ </div>
+	
+<div id="right_content"></div>
+<div class="loader"></div>
+<div class="pkg_container">
+        <div class="property-filter pull-right">
+              <div>
+              <form name="submit" action="#">
+			<div class="map_search">
+				<span class="title">Selected Package</span>
+				<input name="from" value="From" type="text" class="textfield"/>
+        			<input name="to" value="To" type="text" class="textfield"/>
+				<select class="language">
+					<option>English</option>
+					<option>Hindi</option>
+					<option>Bangali</option>
+					<option>Urdu</option>
+					<option>Rajasthani</option>
+				</select>
+				<select class="gender">
+					<option>Select Voice Gender</option>					
+					<option>Male</option>
+					<option>Female</option>
+				</select>
+				<button class="search" type="button">Search</button>
+			</div>
+		 </form>
+               </div>
+           </div>
+         </div>
+</div>
+<div style="display:none;" id="get-selected-city-id"><%=selectedcityId%></display>
+<!--<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyBob1y_FyxWm_rk0IZ38bZy07bqSAlEcSE"></script>-->
+
+
+
+</body>
+</html>

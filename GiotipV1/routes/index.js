@@ -1,0 +1,11 @@
+var router = require('express')();
+var city = require('../model/city');
+var gioSite = require('../model/giosite');
+var gioPoint = require('../model/giopoint');
+router.get('/',function(req,res){res.render('home');});
+router.get('/city',city.getlist);
+router.get('/giosite',gioSite.getlist);
+router.get('/giopoint',gioPoint.getlist);
+router.get('/error',function(req,res){res.render('error',{Error_Code:"404",Error_Message:"Error!!!!!"});});
+router.get('/dashboard',function(req,res){res.render('dashboard',{selectedcityId:req.query.searchlocation})});
+module.exports = router;

@@ -1,0 +1,230 @@
+/*
+    Note: It is best to use a less version of this file ( see http://css2less.cc
+    For the media queries use @screen-sm-min instead of 768px.
+    For .omb_spanOr use @body-bg instead of white.
+*/
+
+#parentcontainer, #parentcontainer > * {
+  position: relative;
+  display:none;
+}
+#parentcontainer:after{
+		content: " ";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        //background-color: black;
+        z-index:1001;
+        //-moz-opacity: 0.72;
+        //opacity:.80;
+        //filter: alpha(opacity=80);
+}
+#signin-model,#signup-model{
+	display:none;
+}
+.signin-up-container{
+	width:50%;
+	margin:0 auto;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top:30px;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+}
+.input-group{
+   font-size: 14px;
+    line-height: 60px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-weight: 400;
+}
+ #form-control{
+    border: none;
+    outline: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    background: 0 0;
+    z-index: 2;
+    border-bottom: 1px solid #e2e2e2;
+    line-height: 70px;
+    height: 50px;
+    width: 100%;
+}
+.input-group label{
+    display: block;
+    position: absolute;
+    top: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: transform 190ms,color .2s;
+    transform: scale(1,1) rotateY(0);
+    color: #ccc;
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+}
+	
+.omb_login .omb_socialButtons a {
+	color: white;  
+	opacity:0.9;
+}
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+	opacity:1;    	
+}
+.omb_socialButtons .omb_btn-facebook {
+background: #3b5998;
+					
+}
+.omb_socialButtons .omb_btn-twitter {
+background: #00aced;
+
+}
+.omb_socialButtons .omb_btn-google {
+background: #c32f10;
+
+}
+.omb_login .omb_loginOr {
+	position: relative;
+	font-size: 1.5em;
+	color: #aaa;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+.omb_login .omb_loginOr .omb_hrOr {
+	background-color: #cdcdcd;
+	height: 1px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.omb_login .omb_loginOr .omb_spanOr {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -0.6em;
+	margin-left: -1.5em;
+	background-color: white;
+	width: 3em;
+	text-align: center;
+}			
+
+.omb_login .omb_loginForm  .help-block {
+    color: red;
+    display:none;
+}
+
+/******************my own ***********************/
+.space-50{
+    width: 100%;
+    height: 25px;
+}
+.omb_login{
+padding: 30px;
+}
+.rmdr{
+    width: 40%;
+    float: left;
+    margin-top:15px;
+}
+.frgtpass{
+	width:40%;
+	float:right;
+	margin-top:15px;
+}
+
+.frgtpass a{
+ float:right;
+}
+
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 17px; height: 17px;
+  border: 1px solid #aaa;
+  background: #0a4859;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713';
+  position: absolute;
+  top: 3px; left: 4px;
+  font-size: 18px;
+  line-height: 0.8;
+  color: white;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.space-15{
+width:100%;
+height:15px;
+}
+#switchtype{
+color:#6b6b6b;
+}
+.new-member{
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    font-weight: 300;
+    color: #9b9b9b;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+
+
+#signup-pass{
+float:left;
+width:48%;
+}
+#signup-email{
+float:left;
+width:48%;
+margin-left:4%;
+}
+#signin-btn, #signup-btn{
+background-color: #323232;
+border-color: #323232;
+position: relative;
+}
