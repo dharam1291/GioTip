@@ -25,7 +25,7 @@ body{
 }
 #login_signup_section{
 	float: right;
-    	height: 78px;
+    height: 78px;
 	margin-right:20px;
 }
 #login_signup_section ul{
@@ -70,17 +70,7 @@ body{
 }
 /******************************************************end of header css *******************************************/
 
-#search_section{
-  /*position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;*/
-  display:none;
-  width: 600px;
-  height: 50px;
-}
+#search_section{	display:none;}
 #tagandform{
     position: absolute;
     top: 50%;
@@ -176,4 +166,3 @@ body{
     height: 5em;
   }
 }
- 

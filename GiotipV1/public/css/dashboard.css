@@ -396,6 +396,7 @@ a:hover { color: #18ac61; text-decoration:none; }
     background-color: #0a4958;
     border-radius: 5px;
     font-size: 15px;
+    cursor:pointer;
 }
 #booknow button{
 	float: right;
@@ -409,9 +410,18 @@ a:hover { color: #18ac61; text-decoration:none; }
     background-color: #0a4958;
     color: white;
     font-size: 15px;
+    cursor:pointer;
 }
-
-
+#booknow-close{
+	margin-bottom: 10px;
+    width: 100%;
+}
+#booknow-close span{
+	font-size: large;
+    margin-left: 99%;
+    color: white;
+    cursor:pointer;
+}
 #giopoint_name{
 	float: left;
     margin-top: 13px;
@@ -427,7 +437,6 @@ a:hover { color: #18ac61; text-decoration:none; }
 
 .markerlabels{
   color: white;
-  //background-color: red;
   font-family: "Lucida Grande", "Arial", sans-serif;
   font-size: 10px;
   text-align: center;

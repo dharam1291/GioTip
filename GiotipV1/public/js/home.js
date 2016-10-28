@@ -33,18 +33,64 @@ $(document).ready(function(){
 	});
 	$('.close').on("click",function(){
 		$('#parentcontainer').css("display","none");
+		clearData_fields()
+		signin_field_show();
+		signup_field_show();
 	})
 	$('li a#signin').on("click",function(){
 		signin_style();
 	})
+	
+	/**
+	 * set action on input box insert data
+	 * **/
+	$('.input-group input[name="username"]').keypress(function(){
+		$('.input-group label[for = "username"]').hide();
+	});
+	$('#signin-pass input[name="password"]').keypress(function(){
+		$('#signin-pass label[for = "password"]').hide();
+	});
+	$('.input-group input[name="email"]').keypress(function(){
+		$('.input-group label[for = "email"]').hide();
+	});
+	$('#signup-pass input[name="password"]').keypress(function(){
+		$('#signup-pass label[for = "password"]').hide();
+	});
+	$('.input-group input[name="name"]').keypress(function(){
+		$('.input-group label[for = "name"]').hide();
+	});
 });
 function signin_style(){
 	$('#parentcontainer').css("display","block");
+	clearData_fields();
+	signin_field_show();
+	signup_field_show();
 	$('#signin-model').css("display","block");
 	$('#signup-model').css("display","none");
 }
 function signup_style(){
 	$('#parentcontainer').css("display","block");
+	clearData_fields();
+	signin_field_show();
+	signup_field_show();
 	$('#signup-model').css("display","block");
 	$('#signin-model').css("display","none");
+}
+
+function signin_field_show(){
+	$('.input-group label[for = "username"]').show();
+	$('#signin-pass label[for = "password"]').show();
+}
+
+function signup_field_show(){
+	$('.input-group label[for = "name"]').show();
+	$('#signup-pass label[for = "password"]').show();
+	$('.input-group label[for = "email"]').show();
+}
+function clearData_fields(){
+	$('.input-group input[name="username"]').val("");
+	$('.input-group input[name="name"]').val("");
+	$('.input-group input[name="email"]').val("");
+	$('#signup-pass input[name="password"]').val("");
+	$('#signin-pass input[name="password"]').val("");
 }
